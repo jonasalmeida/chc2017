@@ -5,7 +5,9 @@ function chc2017(){
         console.log('root div found')
         callAuth.onclick=chc2017.auth
         if(location.search.length>0){
-            chc2017Div.innerHTML='<h3 style="color:green">This is the response of the OAUTH2 call, check original window for the syntax of the URL call</h3>'
+            var h = '<h3 style="color:green">This is the response of the OAUTH2 call, check original window for the syntax of the URL call</h3>'
+            h += '<p style="color:blue">'+location.search+'</p>'
+            chc2017Div.innerHTML=h
         }
     }
     
