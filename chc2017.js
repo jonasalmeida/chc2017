@@ -37,11 +37,11 @@ chc2017.auth=function(){ // oauth authentication
     // use https://authz-demo.sandboxcerner.com/client/demo to go through teh moves
 
     var state= Math.random().toString().slice(2)+Date.now()
-    var url='https://authorization.sandboxcerner.com/tenants/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/protocols/oauth2/profiles/smart-v1/personas/patient/authorize?redirect_uri='+location.href+'&client_id=b3f7136b-f9ca-4498-96e8-d09e15ce00b5r&state='+state+'&response_type=code&aud=https://fhir-myrecord.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca'
+    var url='https://authorization.sandboxcerner.com/tenants/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/protocols/oauth2/profiles/smart-v1/personas/patient/authorize?redirect_uri='+location.href+'&client_id=b3f7136b-f9ca-4498-96e8-d09e15ce00b5&state='+state+'&response_type=code&aud=https://fhir-myrecord.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca'
 
     console.log([url])
 
-    window.open('https://authorization.sandboxcerner.com/tenants/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/protocols/oauth2/profiles/smart-v1/personas/patient/authorize?redirect_uri='+location.href+'&client_id=b3f7136b-f9ca-4498-96e8-d09e15ce00b5&state='+state+'&response_type=code&aud=https://fhir-myrecord.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca')
+    window.open(url)
 
     fullAuthUrlCall.textContent=url
 
